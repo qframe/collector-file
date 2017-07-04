@@ -41,25 +41,11 @@
 			"revisionTime": "2017-07-02T18:38:29Z"
 		},
 		{
-			"checksumSHA1": "kPupunhw3dngpy/aRdO+XSXA9Xc=",
-			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/albrow/negroni-json-recovery",
-			"path": "github.com/albrow/negroni-json-recovery",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
-		},
-		{
 			"checksumSHA1": "sf4g0YAhmh8Y8pvjGhOJAf54dN0=",
 			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/codegangsta/cli",
 			"path": "github.com/codegangsta/cli",
 			"revision": "b892ba3809cd07fcf2b064e166b0c2e16e0147bd",
 			"revisionTime": "2017-06-25T03:28:08Z"
-		},
-		{
-			"checksumSHA1": "8CerQHkN7CkiZKdW5qo/NxmBBqM=",
-			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/codegangsta/negroni",
-			"path": "github.com/codegangsta/negroni",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
 		},
 		{
 			"checksumSHA1": "xvSa+kz+sCPBTlSLqARaBgniqjE=",
@@ -347,20 +333,6 @@
 			"revisionTime": "2017-06-27T23:12:24Z"
 		},
 		{
-			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
-			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/gorilla/context",
-			"path": "github.com/gorilla/context",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
-		},
-		{
-			"checksumSHA1": "D1BVROe0MVJEDgm++mv1iVQ6+80=",
-			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/gorilla/mux",
-			"path": "github.com/gorilla/mux",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
-		},
-		{
 			"checksumSHA1": "PuPCvO9gawdoclpOB9q+JsQYG5g=",
 			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/grafov/bcast",
 			"path": "github.com/grafov/bcast",
@@ -445,30 +417,18 @@
 			"revisionTime": "2017-07-02T18:38:29Z"
 		},
 		{
-			"checksumSHA1": "2+ZRs/9Er2OAjcWLYmoip86dN+s=",
-			"path": "github.com/qframe/collector-opentsdb/lib",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
-		},
-		{
-			"checksumSHA1": "F5nBQ0JVCo479v35R1eoTJSHEmM=",
-			"path": "github.com/qframe/collector-opentsdb/models",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
-		},
-		{
-			"checksumSHA1": "XdlZOK93lIZa8cHg/UNVeBLQ+6c=",
+			"checksumSHA1": "0Xj4ELvinVxZNzoeXV+adY5Ea9c=",
 			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/qnib/qframe-types",
 			"path": "github.com/qnib/qframe-types",
-			"revision": "5ede6487875b44d432d6548b64e43f823beb22b7",
-			"revisionTime": "2017-06-08T12:20:36Z"
+			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
+			"revisionTime": "2017-07-02T18:38:29Z"
 		},
 		{
 			"checksumSHA1": "Urhq3MJWVz6GbfE0AFQXkDsSPyQ=",
 			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/qnib/qframe-utils",
 			"path": "github.com/qnib/qframe-utils",
-			"revision": "32f577044c9bcebb4c9101215b12d496e30c60fb",
-			"revisionTime": "2017-05-21T09:22:01Z"
+			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
+			"revisionTime": "2017-07-02T18:38:29Z"
 		},
 		{
 			"checksumSHA1": "zmC8/3V4ls53DJlNTKDZwPSC/dA=",
@@ -476,20 +436,6 @@
 			"path": "github.com/satori/go.uuid",
 			"revision": "5bf94b69c6b68ee1b541973bb8e1144db23a194b",
 			"revisionTime": "2017-03-21T23:07:31Z"
-		},
-		{
-			"checksumSHA1": "FXzvTWp5GLM6Y4avBKCMbuaeH8Y=",
-			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/unrolled/render",
-			"path": "github.com/unrolled/render",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
-		},
-		{
-			"checksumSHA1": "v+8aIBlrTYcd8v2gnnJrS/glTYw=",
-			"origin": "github.com/qframe/collector-opentsdb/vendor/github.com/urfave/negroni",
-			"path": "github.com/urfave/negroni",
-			"revision": "42d2ef2a42810a0244d407c3fe1ce13182af1223",
-			"revisionTime": "2017-07-02T18:38:29Z"
 		},
 		{
 			"checksumSHA1": "m8hYD/alsufIYIM7sR06wbL+dKo=",
