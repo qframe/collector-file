@@ -17,7 +17,6 @@ const (
 
 type Plugin struct {
 	qtypes.Plugin
-	Name string
 }
 
 func New(qChan qtypes.QChan, cfg *config.Config, name string) (Plugin, error) {
@@ -46,7 +45,7 @@ func (p *Plugin) Run() {
 	}
 	b := qtypes.NewBase(p.Name)
 	for line := range t.Lines {
-		qm := qtypes.NewMessage(b, fPath, qtypes.MsgFile, line.Text)
+		qm := qtypes.NewMessage(b, fPath, "file", line.Text)
 		p.QChan.Data.Send(qm)
 	}
 }
