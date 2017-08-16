@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"github.com/hpcloud/tail"
-	"github.com/qnib/qframe-types"
 	"github.com/zpatrick/go-config"
 	"github.com/qframe/types/qchannel"
 	"github.com/qframe/types/plugin"
@@ -48,7 +47,7 @@ func (p *Plugin) Run() {
 	}
 	b := qtypes_messages.NewBase(p.Name)
 	for line := range t.Lines {
-		qm := qtypes_messages.NewMessage(b, fPath, "file", line.Text)
+		qm := qtypes_messages.NewMessage(b, line.Text)
 		p.QChan.SendData(qm)
 	}
 }
