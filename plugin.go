@@ -1,4 +1,4 @@
-package collector_file
+package qcollector_file
 
 import (
 	"log"
@@ -7,6 +7,9 @@ import (
 	"github.com/hpcloud/tail"
 	"github.com/qnib/qframe-types"
 	"github.com/zpatrick/go-config"
+	"github.com/qframe/types/qchannel"
+	"github.com/qframe/types/plugin"
+	"github.com/qframe/types/messages"
 )
 
 const (
@@ -16,12 +19,12 @@ const (
 )
 
 type Plugin struct {
-	qtypes.Plugin
+	*qtypes_plugin.Plugin
 }
 
-func New(qChan qtypes.QChan, cfg *config.Config, name string) (Plugin, error) {
+func New(qChan qtypes_qchannel.QChan, cfg *config.Config, name string) (Plugin, error) {
 	return Plugin{
-		Plugin: qtypes.NewNamedPlugin(qChan, cfg, pluginTyp, pluginPkg, name, version),
+		Plugin: qtypes_plugin.NewNamedPlugin(qChan, cfg, pluginTyp, pluginPkg, name, version),
 	}, nil
 }
 
@@ -43,9 +46,9 @@ func (p *Plugin) Run() {
 	if err != nil {
 		log.Printf("[WW] File collector failed to open %s: %s", fPath, err)
 	}
-	b := qtypes.NewBase(p.Name)
+	b := qtypes_messages.NewBase(p.Name)
 	for line := range t.Lines {
-		qm := qtypes.NewMessage(b, fPath, "file", line.Text)
-		p.QChan.Data.Send(qm)
+		qm := qtypes_messages.NewMessage(b, fPath, "file", line.Text)
+		p.QChan.SendData(qm)
 	}
 }

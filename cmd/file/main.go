@@ -3,13 +3,13 @@ package main
 import (
 	"log"
 	"github.com/zpatrick/go-config"
-	"github.com/qnib/qframe-types"
 	"github.com/qframe/collector-file"
 	"os"
+	"github.com/qframe/types/qchannel"
 )
 
 func main() {
-	qChan := qtypes.NewQChan()
+	qChan := qtypes_qchannel.NewQChan()
 	qChan.Broadcast()
 	if len(os.Args) != 2 {
 		log.Fatal("usage: ./file <path>")
@@ -21,12 +21,12 @@ func main() {
 	}
 	cfg := config.NewConfig([]config.Provider{config.NewStatic(cfgMap)})
 
-	p, err := collector_file.New(qChan, cfg, "file")
+	p, err := qcollector_file.New(qChan, cfg, "file")
 	if err != nil {
 		log.Fatalf("[EE] Failed to create collector: %v", err)
 	}
 	go p.Run()
-	bg := p.QChan.Data.Join()
+	bg,_,_ := p.JoinChannels()
 	for {
 		val := <- bg.Read
 		log.Printf("%v", val)
