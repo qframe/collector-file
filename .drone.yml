@@ -1,0 +1,15 @@
+workspace:
+  base: /drone
+  path: src/github.com/qframe/qcollector-file
+
+pipeline:
+  clone:
+    image: plugins/git
+    tags: true
+  test:
+    image: qnib/uplain-golang
+    pull: true
+    commands:
+     - go build -ldflags "-pluginpath=qcollector-file" -buildmode=plugin -o file.so plugin.go
+    environment:
+     - GOPATH=/drone/

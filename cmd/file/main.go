@@ -27,7 +27,7 @@ func main() {
 		log.Fatalf("[EE] Failed to create collector: %v", err)
 	}
 	go p.Run()
-	bg := p.QChan.Data.Join()
+	bg,_,_ := p.JoinChannels()
 	for {
 		val := <- bg.Read
 		log.Printf("%v", val)

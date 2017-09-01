@@ -4,10 +4,10 @@ import (
 	"log"
 	"os"
 	"github.com/hpcloud/tail"
-	"github.com/qnib/qframe-types"
 	"github.com/zpatrick/go-config"
 	"github.com/qframe/types/qchannel"
 	"github.com/qframe/types/plugin"
+	"github.com/qframe/types/messages"
 )
 
 const (
@@ -44,10 +44,10 @@ func (p *Plugin) Run() {
 	if err != nil {
 		log.Printf("[WW] File collector failed to open %s: %s", fPath, err)
 	}
-	b := qtypes.NewBase(p.Name)
+	b := qtypes_messages.NewBase(p.Name)
 	for line := range t.Lines {
-		qm := qtypes.NewMessage(b, fPath, "file", line.Text)
-		p.QChan.Data.Send(qm)
+		qm := qtypes_messages.NewMessage(b, line.Text)
+		p.QChan.SendData(qm)
 	}
 }
 
