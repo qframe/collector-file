@@ -1,12 +1,13 @@
-package collector_file
+package qcollector_file
 
 import (
 	"log"
 	"os"
-
 	"github.com/hpcloud/tail"
 	"github.com/qnib/qframe-types"
 	"github.com/zpatrick/go-config"
+	"github.com/qframe/types/qchannel"
+	"github.com/qframe/types/plugin"
 )
 
 const (
@@ -16,12 +17,12 @@ const (
 )
 
 type Plugin struct {
-	qtypes.Plugin
+	*qtypes_plugin.Plugin
 }
 
-func New(qChan qtypes.QChan, cfg *config.Config, name string) (Plugin, error) {
+func New(qChan qtypes_qchannel.QChan, cfg *config.Config, name string) (Plugin, error) {
 	return Plugin{
-		Plugin: qtypes.NewNamedPlugin(qChan, cfg, pluginTyp, pluginPkg, name, version),
+		Plugin: qtypes_plugin.NewNamedPlugin(qChan, cfg, pluginTyp, pluginPkg, name, version),
 	}, nil
 }
 
@@ -49,3 +50,4 @@ func (p *Plugin) Run() {
 		p.QChan.Data.Send(qm)
 	}
 }
+
